@@ -35,6 +35,10 @@ pub mod entities;
 
 pub mod interactable;
 
+/// Stores collection if information that does not belong in the ecs.
+/// Like recipies, loot-tables etc .
+pub mod registries;
+
 /// Registers gameplay systems with the given `Game` and `SystemExecutor`.
 pub fn register(game: &mut Game, systems: &mut SystemExecutor<Game>) {
     view::register(game, systems);
